@@ -1,5 +1,7 @@
+import 'package:e_commerce_ui/core/utiles/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utiles/app_text_styles.dart';
 import '../../../../cart/presentaion/views/cart_view.dart';
 
 class HomeViewAppBar extends StatelessWidget {
@@ -18,30 +20,24 @@ class HomeViewAppBar extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, CartView.routeName);
             },
-            icon: const Icon(Icons.sort, size: 30, color: Color(0xFF4c53A5)),
+            icon:
+                const Icon(Icons.sort, size: 30, color: AppColors.primaryColor),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 20),
-            child: Text(
-              "Do Shop",
-              style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF4c53A5),
-              ),
-            ),
+            child: Text("Do Shop", style: TextStyles.bold23),
           ),
           const Spacer(),
           Badge(
             backgroundColor: Colors.redAccent,
-            label: Text("3"),
+            label: const Text("3"),
             padding: const EdgeInsets.all(3),
             child: IconButton(
                 onPressed: () {},
                 icon: const Icon(
                   Icons.shopping_bag_rounded,
                   size: 35,
-                  color: Color(0xFF4c53A5),
+                  color: AppColors.primaryColor,
                 )),
           ),
           // badges.Badge(
